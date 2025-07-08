@@ -13,12 +13,6 @@ import lombok.Setter;
 public class TradeDTO {
     private Integer id;
 
-    private CarDTO car;
-
-    private String number;
-
-    private String name;
-
     private String purchase_date;
 
     private Integer purchase_price;

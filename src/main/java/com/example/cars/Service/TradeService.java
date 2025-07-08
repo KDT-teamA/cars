@@ -29,14 +29,16 @@ public class TradeService {
         tradeRepository.save(tradeEntity);
     }
 
+    public TradeDTO read(Integer id) {
+        return modelMapper.map(tradeRepository.findById(id), TradeDTO.class);
+    }
+
     public TradeDTO read_by_car_id(Integer car_id) {
         return modelMapper.map(tradeRepository.findByCar_Id(car_id), TradeDTO.class);
     }
 
     public void update(Integer id, TradeDTO tradeDTO) {
         TradeEntity tradeEntity = tradeRepository.findById(id).get();
-        tradeEntity.setNumber(tradeDTO.getNumber());
-        tradeEntity.setName(tradeDTO.getName());
         tradeEntity.setPurchase_date(tradeDTO.getPurchase_date());
         tradeEntity.setPurchase_price(tradeDTO.getPurchase_price());
         tradeEntity.setSale_date(tradeDTO.getSale_date());

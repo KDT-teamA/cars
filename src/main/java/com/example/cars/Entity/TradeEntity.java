@@ -24,12 +24,6 @@ public class TradeEntity {
     private CarEntity car;
 
     @Column
-    private String number;
-
-    @Column
-    private String name;
-
-    @Column
     private String purchase_date;
 
     @Column
