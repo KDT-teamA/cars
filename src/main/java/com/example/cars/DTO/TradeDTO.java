@@ -22,4 +22,8 @@ public class TradeDTO {
     private String sale_price;
 
     private Flatform flatform;
+
+    public String getFlatformDescription() {
+        return flatform != null ? flatform.getDescription() : null;
+    }
 }
